@@ -11,17 +11,18 @@ function moveBackground(event) {
     const isOdd = i % 2 !== 0;
     const boolInt = isOdd ? -1 : 1;
     // Added rotate after tutorial
-    shapes[i].style.transform = `translate(${x * boolInt}px, ${y * boolInt}px) rotate(${x * boolInt * 10}deg)`
+    shapes[i].style.transform = `translate(${x * boolInt}px, ${
+      y * boolInt
+    }px) rotate(${x * boolInt * 10}deg)`;
   }
 }
 
 function toggleContrast() {
   contrastToggle = !contrastToggle;
   if (contrastToggle) {
-    document.body.classList += " dark-theme"
-  }
-  else {
-    document.body.classList.remove("dark-theme")
+    document.body.classList += " dark-theme";
+  } else {
+    document.body.classList.remove("dark-theme");
   }
 }
 
@@ -31,12 +32,7 @@ function contact(event) {
   const success = document.querySelector(".modal__overlay--success");
   loading.classList += " modal__overlay--visible";
   emailjs
-    .sendForm(
-      "service_80ih0if",
-      "template_d9refyl",
-      event.target,
-      "user_K1PoFs8pB2YVWStDxrUls"
-    )
+    .sendForm("service_3szihua", "template_ppsq1xv", event.target)
     .then(() => {
       loading.classList.remove("modal__overlay--visible");
       success.classList += " modal__overlay--visible";
@@ -44,7 +40,7 @@ function contact(event) {
     .catch(() => {
       loading.classList.remove("modal__overlay--visible");
       alert(
-        "The email service is temporarily unavailable. Please contact me directly on email@email.com"
+        "The email service is temporarily unavailable. Please contact me directly on alcamara237@gmail.com"
       );
     });
 }

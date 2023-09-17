@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 html {
@@ -33,7 +33,8 @@ section {
   transition: all 300ms ease;
 }
 
-input, textarea {
+input,
+textarea {
   width: 100%;
   background-color: #242424;
   color: #fff;
@@ -43,6 +44,7 @@ input, textarea {
   border-left: none;
   border-right: none;
   height: 40px;
+  max-height: 250px;
   transition: all 300ms ease;
 }
 
@@ -57,11 +59,13 @@ label {
   font-weight: bold;
 }
 
-input:hover, textarea:hover {
+input:hover,
+textarea:hover {
   border-color: #dcdfe6;
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
   border-color: #f06449;
 }
 
@@ -149,15 +153,14 @@ nav,
 .dark-theme .section__sub-title,
 .dark-theme .nav__link--anchor,
 .dark-theme .fa-adjust,
-.dark-theme .header__para
-{
+.dark-theme .header__para {
   color: white;
 }
 .dark-theme section {
   background-color: #242424;
 }
 .dark-theme #personal-logo {
-  filter: none;
+  filter: invert(1);
 }
 .dark-theme .scroll__icon {
   border-color: white;
@@ -259,7 +262,7 @@ nav,
   0% {
     transform: translateY(3px);
   }
-  
+
   100% {
     transform: translateY(-3px);
   }
@@ -285,7 +288,7 @@ nav {
 #personal-logo {
   width: 50px;
   height: 50px;
-  filter: invert(1);
+  filter: none;
 }
 
 .nav__link--list {
@@ -326,7 +329,7 @@ nav {
   z-index: -1;
   transition: visibility 1s, z-index 1s, box-shadow 0.5s ease;
 }
-.modal--open .modal{
+.modal--open .modal {
   z-index: 60;
   box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.55);
   visibility: visible;
@@ -342,8 +345,7 @@ nav {
 }
 
 .modal--open .modal__about,
-.modal--open .modal__contact
-{
+.modal--open .modal__contact {
   transform: translateX(0%);
 }
 
@@ -535,7 +537,7 @@ nav {
 }
 
 .project__wrapper:hover .project__wrapper--bg {
-  opacity: 0.7; 
+  opacity: 0.7;
   visibility: visible;
 }
 
@@ -546,7 +548,7 @@ nav {
   width: 100%;
   height: 100%;
   background-color: #1c1d25;
-  opacity: 0; 
+  opacity: 0;
   transition: all 450ms ease;
   visibility: hidden;
 }
@@ -590,6 +592,7 @@ footer {
 
 .footer__logo--img {
   width: 70px;
+  filter: invert(1);
 }
 
 .footer__social--list {
